@@ -59,7 +59,7 @@ function showCards(m) {
     <img src=${m.Poster} class="card-img-top"  alt=" ">
     <div class="card-body">
       <h5 class="card-title" >${m.Title}</h5>
-      <p class="card-text">Tahun : ${m.Year}</p>
+      <p class="card-text">Year : ${m.Year}</p>
       <a href="#infoDetail" class="btn btn-primary detailBtn " data-toggle="modal" data-target="#infoDetail"  data-idfilm="${m.imdbID}" >Info Detail</a>
     </div>
   </div></div>`;
