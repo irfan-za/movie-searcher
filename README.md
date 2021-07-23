@@ -1,7 +1,7 @@
 # Movie Searcher
 build with : Html, css, js, bootstrap
 
-##How to use
+## How to use
 1. open the website https://irfan-za.github.io/movie-searcher/
 2. input your movie that you want
 3. click search and then will display a list up to ten websites related to your search
