@@ -56,7 +56,7 @@ const updateUI = (mS) => {
 };
 
 function showCards(m) {
-  return `<div class="col col-md-4 my-2 " >
+  return `<div class="col col-lg-4 my-2 " >
     <div class="card"  >
     <img src=${m.Poster} class="card-img-top"  alt=" ">
     <div class="card-body">
