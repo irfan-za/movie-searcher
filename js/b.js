@@ -14,11 +14,13 @@ searchInput.addEventListener("keyup", function (e) {
 });
 searchButton.addEventListener("click", async () => {
   // async untuk kasih tau js kalau  ada fungsi asynchronous yaitu funsi pd await
-  movieContainer.innerHTML = `<h4 class="text-center">Loading cuy...</h4>`;
+  movieContainer.innerHTML = `<h4 class="text-center">Loading...</h4>`;
+  elementFooter.style.display="none";
   try {
     const movies = await fetchMovie(searchInput.value);
     // await untuk tunggu fungsi asynchronousnya dijalankan
     updateUI(movies);
+    elementFooter.style.display="block";
     elementFooter.innerHTML = footer();
   } catch (err) {
     // console.log(err)
@@ -126,17 +128,16 @@ function modalBody(d) {
 const footer = () => {
   return `
   <div
+  id="footer-content"
   class="bg-dark mx-auto"
   style="
-  font-size:10px;
   width: 100%;
-  padding: 5px 0 5px 0;
+  padding: 10px 0 5px 0;
   bottom: 0;">
   <div class="container text-white-50"
   style="max-width: 400px; ">
-    Source :  <a href="http://www.omdbapi.com/" class="text-white-50">omdbapi.com</a>
-    <br>
-    Icons : <a href="https://www.flaticon.com/authors/icongeek26" title="Icongeek26" class="text-white-50">Icongeek26</a> from <a href="https://www.flaticon.com/" title="Flaticon" class="text-white-50">www.flaticon.com</a>
+    <p>Build with 💖 by <a href="http://irfan-za.netlify.app/" class="text-white-50">Muhammad Irfan Zahran</a></p>
+    <p style='font-size:10px;'>Icons : <a href="https://www.flaticon.com/authors/icongeek26"  class="text-white-50">Icongeek26</a> from <a href="https://www.flaticon.com/" title="Flaticon" class="text-white-50">www.flaticon.com</a></p>
   </div>
   </div>
   `;
